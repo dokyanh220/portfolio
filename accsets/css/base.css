@@ -1,0 +1,48 @@
+:root {
+    --text-color: #8a8a9a;
+
+    --main1-color: #00e5ff; 
+    --shadow1-color: #5cefff; 
+    --main1-rgba-color: rgba(0, 229, 255, 0.1);
+
+    --main2-color: rgb(255, 62, 127); 
+    --shadow2-color: rgb(250, 78, 137); 
+    --main2-rgba-color: rgba(255, 62, 127, 0.1);
+
+    --main3-color: rgb(123, 104, 238); 
+    --shadow3-color: rgb(120, 104, 238); 
+    --main3-rgba-color: rgba(123, 104, 238, 0.1);
+
+    --main4-color: rgb(16, 185, 129); 
+    --shadow4-color: rgb(10, 185, 129); 
+    --main4-rgba-color: rgba(16, 185, 129, 0.1);
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+
+
+/* reponsive */
+.grid{
+    width: 848px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__row{
+    display: flex;
+    width: 100%;
+}
+
+.grid__column-2{
+    width: 50%;
+}

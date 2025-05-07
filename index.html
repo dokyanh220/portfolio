@@ -11,12 +11,14 @@
     <link rel="shortcut icon" href="./accsets/img/avatar/IMG_1871.JPG" type="image/x-icon">
 </head>
 <body>
+    <div class="progress-bar"></div>
+
     <div class="grid">
         <header class="header">
             <div class="header__name">
                 <div class="grid__row">
 
-                    <img src="./accsets/img/avatar/IMG_1871.JPG" alt="" class="header__name-avt">
+                    <img src="./accsets/img/avatar/IMG_1871.png" alt="" class="header__name-avt">
                     <div class="header__name-group1">
                         <h2 class="header__name-default">
                             Dokyanh220
@@ -132,7 +134,8 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="activity" class="lucide lucide-activity w-4 h-4 text-[#00e5ff]"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg>
                     </div>
                     <h3 class="card-box__heading">Developer Metrics</h3>
-                    <i class="fa-solid fa-angle-down"></i>
+                    <i class="card-box__header--close-card-mini fa-solid fa-angle-down"></i>
+                    <i class="card-box__header--open-card-mini fa-solid fa-angle-up"></i>
             </header>
 
             <span class="card-box__time">
@@ -269,35 +272,35 @@
                     
                     <div class="card-mini4">
                     
-                                    <header class="card-mini__header">
-                                        <ul class="card-mini__header-ul header__name-tags">
-                                            <li class="card-mini__header-li header__name-tag-item4">
-                                                <i class="fa-solid fa-code-branch"></i>
-                                            </li>
-                                            <li class="card-mini__header-li header__name-tag-item4">
-                                                <i class="fa-solid fa-code-merge"></i>
-                                                <span>Open source</span>
-                                            </li>
-                                        </ul>
-                                    </header>
+                        <header class="card-mini__header">
+                            <ul class="card-mini__header-ul header__name-tags">
+                                <li class="card-mini__header-li header__name-tag-item4">
+                                    <i class="fa-solid fa-code-branch"></i>
+                                </li>
+                                <li class="card-mini__header-li header__name-tag-item4">
+                                    <i class="fa-solid fa-code-merge"></i>
+                                    <span>Open source</span>
+                                </li>
+                            </ul>
+                        </header>
                     
-                                    <article class="card-mini__body">
-                                        <h5 class="card-mini4__body-num">0</h5>
-                                        <p class="card-mini__body-desc">Contributions <i class="fa-regular fa-circle-question"></i></p>
-                                    </article>
+                        <article class="card-mini__body">
+                            <h5 class="card-mini4__body-num">0</h5>
+                            <p class="card-mini__body-desc">Contributions <i class="fa-regular fa-circle-question"></i></p>
+                        </article>
                     
-                                    <footer class="card-mini__footer">
-                                        <div class="card-mini__footer-completed">
-                                            <h7 class="card-mini__footer-heading">Prs:</h7>
-                                            <p class="card-mini4__footer-num">0</p>
-                                        </div>
+                        <footer class="card-mini__footer">
+                            <div class="card-mini__footer-completed">
+                                <h7 class="card-mini__footer-heading">Prs:</h7>
+                                <p class="card-mini4__footer-num">0</p>
+                            </div>
                     
-                                        <div class="card-mini__footer-inprogress">
-                                            <h7 class="card-mini__footer-heading">Issues:</h7>
-                                            <p class="card-mini4__footer-num">0</p>
-                                        </div>
+                            <div class="card-mini__footer-inprogress">
+                                <h7 class="card-mini__footer-heading">Issues:</h7>
+                                <p class="card-mini4__footer-num">0</p>
+                            </div>
                     
-                                    </footer>
+                        </footer>
                                     
                     </div>
 
@@ -318,8 +321,338 @@
                 </div>
              </article>
 
+             <article class="activity-timeline">
+                <div class="activity-timeline__header">
+                    <h3 class="activity-timeline__head">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="activity" class="lucide lucide-activity w-4 h-4 text-[#00e5ff]"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg> 
+                        Activity Timeline
+                    </h3>
+                    <button class="activity-timeline__head-btn">
+                        in day
+                    </button>
+                </div>
+                <div class="activity-timeline__body">
+                    <svg viewBox="0 0 300 40" preserveAspectRatio="none">
+                        <!-- Activity line -->
+                        <path d="M0,10 C25,20 25,30 50,30 C75,0 75,30 100,30 C125,0 125,30 150,30 C175,0 175,30 200,30 C225,0 225,30 250,30 C275,0 275,30 300,30 " stroke="url(#activityGradient)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+
+                        <!-- Activity area -->
+                        <path d="M0,10 C25,20 25,30 50,30 C75,0 75,30 100,30 C125,0 125,30 150,30 C175,0 175,30 200,30 C225,0 225,30 250,30 C275,0 275,30 300,30  L300,40 L0,40 Z" fill="url(#areaGradient)" opacity="0.2"></path>
+
+                        <!-- Gradient definitions -->
+                        <defs>
+                            <linearGradient id="activityGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#00e5ff"></stop>
+                                <stop offset="50%" stop-color="#7b68ee"></stop>
+                                <stop offset="100%" stop-color="#ff3e7f"></stop>
+                            </linearGradient>
+                            <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" stop-color="#00e5ff"></stop>
+                                <stop offset="100%" stop-color="rgba(0, 229, 255, 0)"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="activity-timeline__body-text">
+                    <p>Mon</p>
+                    <p>Tue</p>
+                    <p>Wed</p>
+                    <p>Thu</p>
+                    <p>Fri</p>
+                    <p>Sat</p>
+                    <p>Sun</p>
+                </div>
+             </article>
+
         </div>
+
+        <!-- Content information -->
+        <div class="infor">
+            
+            <div class="infor-about">
+                <div class="about-line-left"></div>
+
+                <div class="about-title">
+                    <i class="fa-regular fa-user"></i>
+                    <p class="about-title__head">about</p>
+                    <span class="about-title__tag header__name-tag-item2">Developer</span>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-content__header">
+                        <div class="about-content__group1">
+                            <img src="./accsets/img/avatar/IMG_1796.png" alt="" class="about-content__header-avt">
+                            <div class="about-content__group1-1">
+                                <h3 class="about-content__heading">about me</h3>
+                                <span class="about-content__birthday"><i class="fa-solid fa-cake-candles"></i> 21-10-2007</span>
+                            </div>
+                        </div>
+                        <button class="about-content__btn">
+                            <i class="fa-regular fa-envelope"></i>
+                            contact
+                        </button>
+                        <button class="about-content__btn">
+                            <i class="fa-solid fa-download"></i>
+                            download cv
+                        </button>
+                    </div>
+
+                    <div class="about-content__container">
+                        <p class="about-content__preface">i'm a <span style="color: var(--main1-color);">passionate developer </span> in Vietnam, am currently studying and completing some personal projects.</p>
+                        <div class="about-content__container-group1">
+                            <div class="about-content__group1-line-left">
+                            </div>
+                            <p class="about-content__slogan">"the best way to predict the future is to invent it." — Alan Kay</p>
+                        </div>
+                        <p class="about-content__desc">i specialize in full-stack development with expertise in <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span>, <span>Git</span>, and more. i'm constantly learning new technologies to stay at the forefront of web development.</p>
+            
+                        <div class="about-content__box">
+                            <div class="about-content__box-content">
+                                <div class="about-content__box-head">
+                                    projects
+                                    <i class="fa-regular fa-folder"></i>
+                                </div>
+                                <p class="about-content__box-num">5+</p>
+                            </div>
+
+                            <div class="about-content__box-content">
+                                <div class="about-content__box-head">
+                                    projects
+                                    <i class="fa-regular fa-folder"></i>
+                                </div>
+                                <p class="about-content__box-num">5+</p>
+                            </div>
+
+                            <div class="about-content__box-content">
+                                <div class="about-content__box-head">
+                                    projects
+                                    <i class="fa-regular fa-folder"></i>
+                                </div>
+                                <p class="about-content__box-num">5+</p>
+                            </div>
+
+                            <div class="about-content__box-content">
+                                <div class="about-content__box-head">
+                                    projects
+                                    <i class="fa-regular fa-folder"></i>
+                                </div>
+                                <p class="about-content__box-num">5+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid__row">
+                <div class="grid__column-2">
+                    <div class="infor-communities">
+                        <div class="communities-line-left"></div>
+    
+                        <div class="communities-title">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                            <p class="communities-title__head">communities</p>
+                            <span class="communities-title__tag header__name-tag-item2">active</span>
+                        </div>
+    
+                        <div class="communities-content">
+                            <ul class="communities-content__list">
+                                <li class="communities-content__list-item">
+                                    <p class="communities-content__list-item-desc color-white font-bold">Student</p>
+                                    <p> at </p>
+                                    <a href="https://aptechvietnam.com.vn/" target="_blank" class="communities-content__list-item-desc color-1 font-bold">Aptech VIETNAM</a>
+                                    <i class="fa-solid fa-school"></i>
+                                </li>
+                                <li class="communities-content__list-item">
+                                    <p class="communities-content__list-item-desc color-white font-bold">Developer</p>
+                                    <p> at </p>
+                                    <a href="https://aptechvietnam.com.vn/" target="_blank" class="communities-content__list-item-desc color-1 font-bold">
+                                        Github
+                                    </a>
+                                    <i class="fa-solid fa-handshake-angle"></i>
+                                </li>
+                                <li class="communities-content__list-item">
+                                    <p class="communities-content__list-item-desc color-white font-bold">Contributors</p>
+                                    <p> at </p>
+                                    <a href="https://anhdo.io.vn/" target="_blank" class="communities-content__list-item-desc color-1 font-bold">
+                                        anhdo.io.vn
+                                    </a>
+                                    <i class="fa-solid fa-code-pull-request"></i>
+                                </li>
+                                <li class="communities-content__list-item">
+                                    <p class="communities-content__list-item-desc color-white font-bold">Domain</p>
+                                    <p> at </p>
+                                    <a href="https://123host.vn/" target="_blank" class="communities-content__list-item-desc color-1 font-bold">
+                                        123host
+                                    </a>
+                                    <i class="fa-solid fa-cloud"></i>
+                                </li>
+                                <li class="communities-content__list-item">
+                                    <p class="communities-content__list-item-desc color-white font-bold">Host</p>
+                                    <p> at </p>
+                                    <a href="https://123host.vn/" target="_blank" class="communities-content__list-item-desc color-1 font-bold">
+                                        123host
+                                    </a>
+                                    <i class="fa-solid fa-cloud"></i>
+                                </li>
+                                <a href="https://m.me/dokyanh.4" target="_blank" style="font-size: 1.2rem; color: var(--text-color); text-decoration: none;">any questions you can inbox to my facebook</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid__column-2">
+                    <div class="infor-projects">
+                        <div class="projects-line-left"></div>
+    
+                        <div class="projects-title">
+                            <i class="fa-regular fa-folder"></i>
+                            <p class="projects-title__head">this projects</p>
+                            <span class="projects-title__tag header__name-tag-item1">open source</span>
+                        </div>
+    
+                        <div class="projects-content">
+                            <ul class="projects-content__list">
+                                <p>an opensource my playground written with </p>
+                                <li class="projects-content__list-item color-1">
+                                    <p>html/css</p>
+                                </li>
+                                <li class="projects-content__list-item color-1">
+                                    <p>javaScript</p>
+                                </li>
+                                <li class="projects-content__list-item color-1">
+                                    <p>this is my first self made page since school</p>
+                                </li>
+                                <li class="projects-content__list-item color-1">
+                                    <a href="https://github.com/dokyanh220" target="_blank" style="text-decoration: none; color: var(--main1-color);">all my pages</a>
+                                </li>
+                                <li class="projects-content__list-item color-1">
+                                    <p>i use chatbot GPT AI, Copilot AI </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="infor-devsetup">
+                <div class="devsetup-line-left"></div>
+
+                <div class="devsetup-title">
+                    <i class="fa-solid fa-laptop"></i>
+                    <p class="devsetup-title__head">dev setup</p>
+                    <span class="devsetup-title__tag header__name-tag-item3">workspace</span>
+                </div>
+
+                <div class="grid__row">
+                    <div class="grid__column-2">
+                        <div class="devsetup-content">
+                            <div class="devsetup-content__card">
+                                <div class="devsetup-content__card-head">
+                                    
+                                    <p class="color-3 font-bold"><i class=" fa-solid fa-microchip"></i> Hardware</p>
+                                </div>
+        
+                                <ul class="devsetup-content__card-list">
+                                    <li class="devsetup-content__card-item">
+                                       
+                                        <p class="color-white font-bold"> <i class="color-1 fa-solid fa-tv"></i> Display :</p>
+                                        <p>Monitor laptop 16inch</p>
+                                    </li>
+                                    <li class="devsetup-content__card-item">
+                                        
+                                        <p class="color-white font-bold"><i class="color-1 fa-solid fa-laptop"></i> Computer :</p>
+                                        <p>Acer Aspire 5(16gb ram)</p>
+                                    </li>
+                                    <li class="devsetup-content__card-item">
+                                        
+                                        <p class="color-white font-bold"><i class="color-1 fa-solid fa-keyboard"></i> Keyboard :</p>
+                                        <p>Aula F75 (Red switches)</p>
+                                    </li>
+                                    <li class="devsetup-content__card-item">
+                                        
+                                        <p class="color-white font-bold"><i class="color-1 fa-solid fa-mouse"></i> Mouse :</p>
+                                        <p>Logigtech G304</p>
+                                    </li>
+                                    <li class="devsetup-content__card-item">
+                                        
+                                        <p class="color-white font-bold"><i class="color-1 fa-solid fa-headphones"></i> Headphone :</p>
+                                        <p>Plextone G25</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="grid__column-2">
+                        <div class="devsetup-content">
+                            <div class="devsetup-content__card">
+                                <div class="devsetup-content__card-head">
+                                    
+                                    <p class="color-3 font-bold"><i class="fa-solid fa-laptop-code"></i> Software</p>
+                                </div>
+        
+                                <ul class="devsetup-content__card-list">
+                                    <li class="devsetup-content__card-item">
+                                       
+                                        <p class="color-white font-bold"> <i class="color-1 fa-solid fa-code"></i> Editor :</p>
+                                        <p>Visual studio code</p>
+                                    </li>
+                                    <li class="devsetup-content__card-item">
+                                        
+                                        <p class="color-white font-bold"><i class="color-1 fa-solid fa-terminal"></i> Terminal :</p>
+                                        <p>None</p>
+                                    </li>
+                                    <li class="devsetup-content__card-item">
+                                        
+                                        <p class="color-white font-bold"><i class="color-1 fa-solid fa-code-branch"></i> Version control :</p>
+                                        <p>Git with Github desktop</p>
+                                    </li>
+                                    <li class="devsetup-content__card-item">
+                                        
+                                        <p class="color-white font-bold"><i class="color-1 fa-brands fa-figma"></i> Design :</p>
+                                        <p>Coppy to <a class="color-1" href="https://tanbaycu.is-a.dev/" style="text-decoration: none;">tanbaycu</a></p>
+                                    </li>
+                                    <li class="devsetup-content__card-item">
+                                        
+                                        <p class="color-white font-bold"><i class="color-1 fa-brands fa-chrome"></i> Browser :</p>
+                                        <p>Chorme with DevTools</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="code" class="lucide lucide-code w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(227, 79, 38);"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="palette" class="lucide lucide-palette w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(21, 114, 182);"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"></path><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-type" class="lucide lucide-file-type w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(49, 120, 198);"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M9 13v-1h6v1"></path><path d="M12 12v6"></path><path d="M11 18h2"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="terminal" class="lucide lucide-terminal w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(55, 118, 171);"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" x2="20" y1="19" y2="19"></line></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="cloud" class="lucide lucide-cloud w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(255, 153, 0);"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="cog" class="lucide lucide-cog w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(222, 165, 132);"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M12 2v2"></path><path d="M12 22v-2"></path><path d="m17 20.66-1-1.73"></path><path d="M11 10.27 7 3.34"></path><path d="m20.66 17-1.73-1"></path><path d="m3.34 7 1.73 1"></path><path d="M14 12h8"></path><path d="M2 12h2"></path><path d="m20.66 7-1.73 1"></path><path d="m3.34 17 1.73-1"></path><path d="m17 3.34-1 1.73"></path><path d="m11 13.73-4 6.93"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="code-2" class="lucide lucide-code-2 w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(0, 173, 216);"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg>
+            </div>
+            <div class="footer-end">
+                <p><span>©</span> 2025</p>
+                <p>dokyanh220</p>
+                <span class="footer__name-tag-item">
+                    <i class="fa-solid fa-code"></i>
+                    learning
+                </span>
+                <span class="footer__name-tag-item">
+                    <i class="fa-solid fa-location"></i>
+                    Việt Nam
+                </span>
+                <span id="date-display" class="footer__name-tag-item">
+                </span>
+                
+            </div>
+        </footer>
     </div>
+    
     <script src="./accsets/js/main.js"></script>
 </body>
 </html>

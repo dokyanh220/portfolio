@@ -224,7 +224,7 @@ body{
 }
 
 .card-mini__footer-technologies{
-    margin-left: 0;
+    margin: 30px 0 0 0;
     list-style: none;
     display: flex;
     align-items: center;
@@ -513,6 +513,12 @@ body{
     font-size: 1.3rem;
     margin: 0 8px;
     height: 30px;
+    cursor: pointer;
+}
+
+.about-content__btn a{
+    text-decoration: none;
+    color: var(--main1-color);
 }
 
 .about-content__preface{
@@ -556,7 +562,7 @@ body{
 
 .about-content__box-content{
     width: 25%;  
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;  
     margin: 0 12px;
     padding: 8px;
@@ -589,7 +595,7 @@ body{
 .infor-communities{
     margin: 16px 0;
     padding: 4px 4px 200px 16px;
-    max-height: 280px;
+    max-height: 350px;
     overflow: hidden;
     position: relative;
     opacity: 0; /* Bắt đầu từ trạng thái ẩn */
@@ -672,7 +678,7 @@ body{
 .infor-projects{
     margin: 16px 0;
     padding: 4px 4px 200px 16px;
-    max-height: 280px;
+    max-height: 350px;
     overflow: hidden;
     position: relative;
     opacity: 0; /* Bắt đầu từ trạng thái ẩn */
@@ -734,6 +740,103 @@ body{
     font-weight: bold;
 }
 
+/* certificates infot */
+.infor-certificates{
+    margin: 16px 0;
+    padding: 4px 4px 4px 16px;
+    position: relative;
+    opacity: 0; /* Bắt đầu từ trạng thái ẩn */
+    transform: translateY(20px); /* Di chuyển từ dưới lên */
+    transition: opacity 3s ease, transform 3s ease; /* Thêm transition */
+}
+
+.infor-certificates.animate {
+    opacity: 1; /* Hiển thị phần tử */
+    transform: translateY(0); /* Đưa phần tử về vị trí ban đầu */
+}
+
+.certificates-line-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 4px;
+    border-radius: 3px;
+    background-color: var(--main4-color);
+    opacity: .5;
+}
+
+.certificates-title{
+    display: flex;
+    color: var(--main4-color);
+    font-size: 2.4rem;
+    font-weight: bold;
+    align-items: center;
+}
+
+.certificates-title__head{
+    margin: 0 12px 0 6px;
+}
+
+.certificates-title__tag{
+    border: none;
+    text-transform: lowercase;
+}
+
+.certificates-content__card{
+    margin: 16px 16px 0 0;
+    padding: 10px;
+    border: 1px solid var(--main4-rgba-color);
+    border-radius: 5px;
+    transition: transform .2s ease-in, background-color .2s ease-in, box-shadow .2s ease-in;
+}
+
+.certificates-content__card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 3px var(--main4-color);
+}
+
+.certificates-content__card-head p{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.certificates-content__card-head span{
+    display: inline-flex;
+    margin-top: 6px;
+}
+
+.certificates-content__card-head svg{
+    background-color: var(--main4-rgba-color);
+    padding: 8px;
+    border-radius: 5px;
+    margin-right: 4px;
+}
+
+.certificates-content__none{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--main4-color);
+    padding-bottom: 21px;
+}
+
+.certificates-content{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--main4-color);
+}
+
+.line-bar{
+    height: 5px; /* Độ dày của thanh */
+    width: 70%;
+    margin: 12px 36px 4px;
+    border-radius: 3px;
+    background: linear-gradient(80deg, #5cefff, #9900ff); /* Gradient màu */
+}
 /* Dev setup infor */
 .infor-devsetup{
     margin: 16px 0;
@@ -870,4 +973,44 @@ body{
     position: fixed;
     bottom: 100px;
     right: 50px;
+}
+
+/* Music */
+
+.play-audio-btn {
+    background-color: var(--main1-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    box-shadow: 0 0px 10px var(--shadow1-color);
+    z-index: 1000;
+}
+
+.play-audio-btn:hover {
+background-color: .play-audio-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
 }

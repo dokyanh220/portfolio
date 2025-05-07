@@ -101,7 +101,7 @@ openbtncardmini.addEventListener('click', () => {
 
 // Lấy tất cả các phần tử cần áp dụng animation
 const animatedElements = document.querySelectorAll(
-    '.infor-about, .infor-communities, .infor-projects, .infor-devsetup'
+    '.infor-about, .infor-communities, .infor-projects, .infor-devsetup, .infor-certificates'
 );
 
 // Tạo một observer
@@ -120,4 +120,20 @@ const observer = new IntersectionObserver((entries, observer) => {
 // Theo dõi từng phần tử
 animatedElements.forEach(element => {
     observer.observe(element);
+});
+
+//phát nhạc
+document.addEventListener('DOMContentLoaded', () => {
+    const audio = document.querySelector('audio');
+    const playButton = document.getElementById('play-audio-btn');
+
+    playButton.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playButton.innerHTML = '<i class="fa-solid fa-pause"></i>'; // Đổi biểu tượng thành "Pause"
+        } else {
+            audio.pause();
+            playButton.innerHTML = '<i class="fa-solid fa-play"></i>'; // Đổi biểu tượng thành "Play"
+        }
+    });
 });

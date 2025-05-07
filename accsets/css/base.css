@@ -87,6 +87,10 @@ html{
     width: 50%;
 }
 
+.grid__column-3{
+    width: 33.3334%;
+}
+
 /* color */
 .color-white{
     color: #fff;
@@ -98,6 +102,10 @@ html{
 
 .color-3{
     color: var(--main3-color);
+}
+
+.color-4{
+    color: var(--main4-color);
 }
 
 /* font */

@@ -9,7 +9,7 @@
     }
     
     .grid__row{
-        display: block
+        display: block;
     }
 
     .grid__column-2{
@@ -20,18 +20,16 @@
         display: none;
     }
 
-    .header__name-slogan{
-        display: none;
+
+    .header{
+        text-align: center;
     }
 
     .header__name-tags{
-        margin: 12px 16px 0 0;
+        margin: 12px 0 0 ;
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
-    }
-
-    .header__name-tags-item3,.header__name-tags-item4{
-        margin-top: 16px;
     }
 
     .card-box{

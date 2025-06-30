@@ -96,13 +96,38 @@ color: #000;              /* Màu của chữ trong vùng được chọn */
     margin-top: 40px;
 }
 
-.header__name-avt{
-    width: 52px;
-    height: 52px;
-    margin: 4px;
-    border: 3px solid var(--main1-color);
+/* 1. Container cho avatar ở header */
+.header-avatar-container {
+    position: relative;
+    width: 85px;  /* Kích thước bằng avatar header gốc */
+    height: 85px;
+    margin: 8px;  /* Giữ lại margin gốc của avatar */
+    flex-shrink: 0; /* Ngăn container bị co lại */
+}
+
+/* 2. Style cho avatar header nằm bên trong container */
+.header-avatar-container .header__name-avt {
+    /* Bỏ margin vì đã đặt ở container cha */
+    margin: 0;
+    /* Kích thước 100% để vừa với container */
+    width: 105%;
+    height: 105%;
     border-radius: 50%;
-    box-shadow: 0 0 15px var(--shadow1-color);
+}
+
+/* 3. Style cho khung avatar, đè lên trên */
+.header-avatar-container .header-avatar-frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Điều chỉnh kích thước khung cho vừa vặn */
+    /* Bạn có thể thay đổi giá trị này */
+    width: 130%; 
+    height: 130%;
+    
+    pointer-events: none; /* Cho phép click xuyên qua khung */
 }
 
 .header__name-group1{

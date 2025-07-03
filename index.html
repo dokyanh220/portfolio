@@ -64,7 +64,7 @@
                         <h2 class="header__name-youtube header__name-hidden">@kyanho8322<i class="fa-regular fa-circle-check"></i></h2>
                         <h2 class="header__name-linkedin header__name-hidden">Dạ em hông có dùng hihi!</h2>
                         <h2 class="header__name-twitter header__name-hidden">@dokyanh220</h2>
-                        <span class="header__name-slogan">"The best way to predict the future is to invent it." — Alan Kay</span>
+                        <span id="slogan-typewriter" class="header__name-slogan"></span>
                     </div>
                 </div>
 
@@ -103,29 +103,100 @@
             </span>
             
             <article class="card-box__card-mini collapse show" id="developerMetricsCollapse">
-                <div class="row">
+                <div class="row g-3">
                     <div class="col-md-6">
-                        <div class="card-mini1">
-                            <header class="card-mini__header"><ul class="card-mini__header-ul header__name-tags"><li class="card-mini__header-li header__name-tag-item1"><i class="fa-regular fa-folder"></i></li><li class="card-mini__header-li header__name-tag-item1"><i class="fa-solid fa-arrow-trend-up"></i><span>Active</span></li></ul></header>
-                            <article class="card-mini__body"><h5 class="card-mini1__body-num">6</h5><p class="card-mini__body-desc">Projects <i class="fa-regular fa-circle-question"></i></p></article>
-                            <footer class="card-mini__footer"><div class="card-mini__footer-completed"><h7 class="card-mini__footer-heading">Completed:</h7><p class="card-mini1__footer-num">4</p></div><div class="card-mini__footer-inprogress"><h7 class="card-mini__footer-heading">In progress:</h7><p class="card-mini1__footer-num">1</p></div></footer>
-                        </div>
-                        <div class="card-mini2">
-                            <header class="card-mini__header"><ul class="card-mini__header-ul header__name-tags"><li class="card-mini__header-li header__name-tag-item2"><i class="fa-solid fa-code"></i></li><li class="card-mini__header-li header__name-tag-item2"><i class="fa-solid fa-graduation-cap"></i><span>learning</span></li></ul></header>
-                            <article class="card-mini__body"><h5 class="card-mini2__body-num">4</h5><p class="card-mini__body-desc">Technologies <i class="fa-regular fa-circle-question"></i></p></article>
-                            <footer class="card-mini__footer"><ul class="card-mini__footer-technologies ps-0"><li><i class="html-icon fa-brands fa-html5"><span> html</span></i></li><li><i class="css-icon fa-brands fa-css3-alt"><span> css</span></i></li><li><i class="js-icon fa-brands fa-js"><span> javascript</span></i></li></ul></footer>
+                        <div class="card-mini1 h-100">
+                            <header class="card-mini__header">
+                                <ul class="card-mini__header-ul header__name-tags">
+                                    <li class="card-mini__header-li header__name-tag-item1"><i class="fa-regular fa-folder"></i></li>
+                                    <li class="card-mini__header-li header__name-tag-item1"><i class="fa-solid fa-arrow-trend-up"></i><span>Active</span></li>
+                                </ul>
+                            </header>
+                            <article class="card-mini__body">
+                                <h5 class="card-mini__body-num card-mini1__body-num">6+</h5>
+                                <p class="card-mini__body-desc">projects</p>
+                            </article>
+                            <footer class="card-mini__footer">
+                                <div class="card-mini__footer-completed">
+                                    <h7 class="card-mini__footer-heading">Completed:</h7>
+                                    <p class="card-mini1__footer-num">5</p>
+                                </div>
+                                <div class="card-mini__footer-inprogress">
+                                    <h7 class="card-mini__footer-heading">In progress:</h7>
+                                    <p class="card-mini1__footer-num">6</p>
+                                </div>
+                            </footer>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="card-mini3">
-                            <header class="card-mini__header"><ul class="card-mini__header-ul header__name-tags"><li class="card-mini__header-li header__name-tag-item3"><i class="fa-regular fa-clock"></i></li><li class="card-mini__header-li header__name-tag-item3"><i class="fa-regular fa-calendar"></i><span>Growing</span></li></ul></header>
-                            <article class="card-mini__body"><h5 class="card-mini3__body-num">4</h5><p class="card-mini__body-desc">month experience<i class="fa-regular fa-circle-question"></i></p></article>
-                            <footer class="card-mini__footer"><div class="card-mini__footer-completed"><h7 class="card-mini__footer-heading">Started:</h7><p class="card-mini3__footer-num">3/2025</p></div><div class="card-mini__footer-inprogress"><h7 class="card-mini__footer-heading">Current:</h7><p class="card-mini3__footer-num">2025</p></div></footer>
+                        <div class="card-mini3 h-100">
+                            <header class="card-mini__header">
+                                <ul class="card-mini__header-ul header__name-tags">
+                                    <li class="card-mini__header-li header__name-tag-item3"><i class="fa-regular fa-clock"></i></li>
+                                    <li class="card-mini__header-li header__name-tag-item3"><i class="fa-regular fa-calendar"></i><span>Growing</span></li>
+                                </ul>
+                            </header>
+                            <article class="card-mini__body">
+                                <h5 class="card-mini__body-num card-mini3__body-num">4+</h5>
+                                <p class="card-mini__body-desc">months experience</p>
+                            </article>
+                            <footer class="card-mini__footer">
+                                <div class="card-mini__footer-completed">
+                                    <h7 class="card-mini__footer-heading">Started:</h7>
+                                    <p class="card-mini3__footer-num">Mar 2025</p>
+                                </div>
+                                <div class="card-mini__footer-inprogress">
+                                    <h7 class="card-mini__footer-heading">Current:</h7>
+                                    <p class="card-mini3__footer-num">2025</p>
+                                </div>
+                            </footer>
                         </div>
-                        <div class="card-mini4">
-                            <header class="card-mini__header"><ul class="card-mini__header-ul header__name-tags"><li class="card-mini__header-li header__name-tag-item4"><i class="fa-solid fa-code-branch"></i></li><li class="card-mini__header-li header__name-tag-item4"><i class="fa-solid fa-code-merge"></i><span>Open source</span></li></ul></header>
-                            <article class="card-mini__body"><h5 class="card-mini4__body-num">0</h5><p class="card-mini__body-desc">Contributions <i class="fa-regular fa-circle-question"></i></p></article>
-                            <footer class="card-mini__footer"><div class="card-mini__footer-completed"><h7 class="card-mini__footer-heading">Prs:</h7><p class="card-mini4__footer-num">0</p></div><div class="card-mini__footer-inprogress"><h7 class="card-mini__footer-heading">Issues:</h7><p class="card-mini4__footer-num">0</p></div></footer>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card-mini2 h-100">
+                            <header class="card-mini__header">
+                                <ul class="card-mini__header-ul header__name-tags">
+                                    <li class="card-mini__header-li header__name-tag-item2"><i class="fa-solid fa-code"></i></li>
+                                    <li class="card-mini__header-li header__name-tag-item2"><i class="fa-solid fa-graduation-cap"></i><span>Learning</span></li>
+                                </ul>
+                            </header>
+                            <article class="card-mini__body">
+                                <h5 class="card-mini__body-num card-mini2__body-num">5+</h5>
+                                <p class="card-mini__body-desc">technologies</p>
+                            </article>
+                            <footer class="card-mini__footer">
+                                <div class="card-mini__footer-completed">
+                                    <h7 class="card-mini__footer-heading">&lt;&gt; HTML</h7>
+                                </div>
+                                <div class="card-mini__footer-inprogress">
+                                    <h7 class="card-mini__footer-heading">() Java</h7>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-mini4 h-100">
+                            <header class="card-mini__header">
+                                <ul class="card-mini__header-ul header__name-tags">
+                                    <li class="card-mini__header-li header__name-tag-item4"><i class="fa-solid fa-code-branch"></i></li>
+                                    <li class="card-mini__header-li header__name-tag-item4"><i class="fa-solid fa-code-merge"></i><span>Open Source</span></li>
+                                </ul>
+                            </header>
+                            <article class="card-mini__body">
+                                <h5 class="card-mini__body-num card-mini4__body-num">0</h5>
+                                <p class="card-mini__body-desc">contributions</p>
+                            </article>
+                            <footer class="card-mini__footer">
+                                <div class="card-mini__footer-completed">
+                                    <h7 class="card-mini__footer-heading">PRs:</h7>
+                                    <p class="card-mini4__footer-num">0</p>
+                                </div>
+                                <div class="card-mini__footer-inprogress">
+                                    <h7 class="card-mini__footer-heading">Issues:</h7>
+                                    <p class="card-mini4__footer-num">0</p>
+                                </div>
+                            </footer>
                         </div>
                     </div>
                 </div>
@@ -208,24 +279,69 @@
                                 </span>
                             </div>
                         </div>
-                        <button class="about-content__btn d-none d-md-inline-block">
-                            <i class="fa-regular fa-envelope"></i>
-                            <a href="https://mail.google.com/mail/u/0/?fs=1&to=kyanhdubo2107@gmail.com&tf=cm" target="_blank">contact</a>
-                        </button>
-                        <button class="about-content__btn d-none d-md-inline-block">
-                            <i class="fa-solid fa-download"></i>
-                            download cv
-                        </button>
+                        <div class="about-content__btn-group">
+                            <button class="about-content__btn d-md-inline-block">
+                                <i class="fa-regular fa-envelope"></i>
+                                <a href="https://mail.google.com/mail/u/0/?fs=1&to=kyanhdubo2107@gmail.com&tf=cm" target="_blank">contact</a>
+                            </button>
+                            <button class="about-content__btn d-md-inline-block">
+                                <i class="fa-solid fa-download"></i>
+                                download cv
+                            </button>
+                        </div>
                     </div>
                     <div class="about-content__container">
                         <p class="about-content__preface">i'm a <span style="color: var(--main1-color);">passionate developer </span> in Vietnam, am currently studying and completing some personal projects.</p>
-                        <div class="about-content__container-group1"><div class="about-content__group1-line-left"></div><p class="about-content__slogan">"Success is not final, failure is not fatal: it is the courage to continue that counts." — Winston Churchill</p></div>
+                        <div class="about-content__container-group1"><div class="about-content__group1-line-left"></div><p class="about-content__slogan text-light fw-bold" style="text-shadow: 0 0 10px var(--main5-color);">"Success is not final, failure is not fatal: it is the courage to continue that counts." — Winston Churchill</p></div>
                         <p class="about-content__desc">i specialize in full-stack development with expertise in <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span>, <span>Git</span>, and more. i'm constantly learning new technologies to stay at the forefront of web development.</p>
-                        <div class="about-content__box d-none d-md-flex">
-                            <div class="about-content__box-content"><div class="about-content__box-head">projects <i class="fa-regular fa-folder"></i></div><p class="about-content__box-num">6</p></div>
-                            <div class="about-content__box-content"><div class="about-content__box-head">experience <i class="fa-solid fa-calendar"></i></div><p class="about-content__box-num">4m</p></div>
-                            <div class="about-content__box-content"><div class="about-content__box-head">technologies <i class="fa-solid fa-microchip"></i></div><p class="about-content__box-num">5</p></div>
-                            <div class="about-content__box-content"><div class="about-content__box-head">love <i class="fa-solid fa-heart"></i></div><p class="about-content__box-num">0</p></div>
+
+                        <div class="about-hobbies">
+                            <h4 class="about-hobbies__title color-4 ms-5"> hobbies<3</h4>
+                            <ul class="about-hobbies__list ps-0">
+                                <li class="about-hobbies__list-item color-1">
+                                    <i class="fa-solid fa-laptop-code"></i> coding
+                                </li>
+                                <li class="about-hobbies__list-item color-2">
+                                    <i class="fa-solid fa-music"></i> music
+                                </li>
+                                <li class="about-hobbies__list-item color-1">
+                                    <i class="fa-solid fa-gamepad"></i> gaming
+                                </li>
+                                <li class="about-hobbies__list-item color-3">
+                                    <i class="fa-solid fa-dumbbell"></i> fitness
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="about-content__box d-md-flex">
+                            <div class="about-content__box-content" data-popup-target="#popup-projects">
+                                <div class="about-content__box-head">
+                                    projects 
+                                    <i class="fa-regular fa-folder"></i>
+                                </div>
+                                <p class="about-content__box-num">6</p>
+                            </div>
+                            <div class="about-content__box-content" data-popup-target="#popup-experience">
+                                <div class="about-content__box-head">
+                                    experience 
+                                    <i class="fa-solid fa-calendar"></i>
+                                </div>
+                                <p class="about-content__box-num">4m</p>
+                            </div>
+                            <div class="about-content__box-content" data-popup-target="#popup-technologies">
+                                <div class="about-content__box-head">
+                                    technologies 
+                                    <i class="fa-solid fa-microchip"></i>
+                                </div>
+                                <p class="about-content__box-num">5</p>
+                            </div>
+                            <div class="about-content__box-content" data-popup-target="#popup-love">
+                                <div class="about-content__box-head">
+                                    love
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                                <p class="about-content__box-num">0</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -357,9 +473,145 @@
         </div>
 
         <footer class="footer d-none d-md-block">
-            <div class="footer-box"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(227, 79, 38);"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(21, 114, 182);"><path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"></path><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-type w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(49, 120, 198);"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M9 13v-1h6v1"></path><path d="M12 12v6"></path><path d="M11 18h2"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-terminal w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(55, 118, 171);"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" x2="20" y1="19" y2="19"></line></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(255, 153, 0);"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cog w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(222, 165, 132);"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M12 2v2"></path><path d="M12 22v-2"></path><path d="m17 20.66-1-1.73"></path><path d="M11 10.27 7 3.34"></path><path d="m20.66 17-1.73-1"></path><path d="m3.34 7 1.73 1"></path><path d="M14 12h8"></path><path d="M2 12h2"></path><path d="m20.66 7-1.73 1"></path><path d="m3.34 17 1.73-1"></path><path d="m17 3.34-1 1.73"></path><path d="m11 13.73-4 6.93"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-2 w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(0, 173, 216);"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg></div>
-            <div class="footer-end"><p><span>©</span> 2025</p><p>dokyanh220</p><span class="footer__name-tag-item"><i class="fa-solid fa-code"></i>learning</span><span class="footer__name-tag-item"><i class="fa-solid fa-location"></i>Việt Nam</span><span id="date-display" class="footer__name-tag-item"></span></div>
+            <div class="footer-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(227, 79, 38);">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(21, 114, 182);">
+                    <path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z"></path>
+                    <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+                    <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+                    <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+                    <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-type w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(49, 120, 198);">
+                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                    <path d="M9 13v-1h6v1"></path>
+                    <path d="M12 12v6"></path>
+                    <path d="M11 18h2"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-terminal w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(55, 118, 171);">
+                    <polyline points="4 17 10 11 4 5"></polyline>
+                    <line x1="12" x2="20" y1="19" y2="19"></line>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(255, 153, 0);">
+                    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cog w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(222, 165, 132);">
+                    <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path>
+                    <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                    <path d="M12 2v2"></path>
+                    <path d="M12 22v-2"></path>
+                    <path d="m17 20.66-1-1.73"></path>
+                    <path d="M11 10.27 7 3.34"></path>
+                    <path d="m20.66 17-1.73-1"></path>
+                    <path d="m3.34 7 1.73 1"></path>
+                    <path d="M14 12h8"></path>
+                    <path d="M2 12h2"></path>
+                    <path d="m20.66 7-1.73 1"></path>
+                    <path d="m3.34 17 1.73-1"></path>
+                    <path d="m17 3.34-1 1.73"></path>
+                    <path d="m11 13.73-4 6.93"></path>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-2 w-5 h-5 transition-transform duration-300 group-hover:scale-125" style="color: rgb(0, 173, 216);">
+                    <path d="m18 16 4-4-4-4"></path>
+                    <path d="m6 8-4 4 4 4"></path>
+                    <path d="m14.5 4-5 16"></path>
+                </svg>
+            </div>
+            <div class="footer-end">
+                <p><span>©</span> 2025</p>
+                <p>dokyanh220</p>
+                <span class="footer__name-tag-item">
+                    <i class="fa-solid fa-code"></i>learning
+                </span>
+                <span class="footer__name-tag-item">
+                    <i class="fa-solid fa-location"></i>Việt Nam
+                </span>
+                <span id="date-display" class="footer__name-tag-item"></span>
+            </div>
         </footer>
+    </div>
+
+    <!-- popup about-content__box-->
+
+    <div id="overlay" class="custom-overlay d-none">
+        <div class="custom-overlay__content">
+            <span id="overlay-close" class="custom-overlay__close">×</span>
+            
+            <div id="popup-projects" class="popup-details d-none">
+                <h3 class="color-1">My projects (5)</h3>
+                <h5>Here are the projects I’ve undertaken and am currently working on as part of my skill development.</h5>
+                <ul>
+                    <li>
+                        <strong>Portfolio:</strong>
+                        <a href="https://anhdo.io.vn">viewing...</a>
+                    </li>
+                    <li>
+                        <strong>Projects game:</strong> 
+                        <a href="https://dokyanh220.github.io/gameTX/">TX, </a>
+                        <a href="https://dokyanh220.github.io/projectVui/">Quiz</a>
+                    </li>
+                    <li>
+                        <strong>Projects Beauty Clinic:</strong> 
+                        <a href="https://dokyanh220.github.io/thammyWeb/">Beauty Clinic</a>
+                    </li>
+                    <li>
+                        <strong>Project Clone TheBand W3S:</strong> 
+                        <a href="https://dokyanh220.github.io/baidautien/">TheBand</a>
+                    </li>
+                    <li><em>And many upcoming projects...</em></li>
+                </ul>
+            </div>
+
+            <div id="popup-experience" class="popup-details d-none">
+                <h3 class="color-1">Experiences (4M)</h3>
+                <p>Started the journey from 3/2025.</p>
+                <p>Every day is an opportunity to learn and develop new skills, from front-end to back-end.</p>
+            </div>
+
+            <div id="popup-technologies" class="popup-details d-none">
+                <h3 class="color-1">Technologies (5)</h3>
+                <p>Key technologies I currently work with include:</p>
+                <ul>
+                    <li class="d-flex align-items-baseline">
+                        <i class="html-icon fa-brands fa-html5"></i> 
+                        <p>HTML5</p>
+                    </li>
+                    <li class="d-flex align-items-baseline">
+                        <i class="css-icon fa-brands fa-css3-alt"></i> 
+                        <p>CSS3</p>
+                    </li>
+                    <li class="d-flex align-items-baseline">
+                        <i class="js-icon fa-brands fa-js"></i> 
+                        <p>JavaScript</p>
+                    </li>
+                    <li class="d-flex align-items-baseline">
+                        <i class="fa-brands fa-git-alt"></i> 
+                        <p>Git & Github</p>
+                    </li>
+                    <li class="d-flex align-items-baseline">
+                        <i class="fa-brands fa-bootstrap"></i> 
+                        <p>Bootstrap</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="popup-love" class="popup-details d-none">
+                <h3 class="color-1">Love</h3>
+                <p style="font-size: 2rem; text-align: center; color: var(--main2-color);">
+                    💔<br>I lonely.
+                </p>
+                <div class="text-center">
+                    <button type="button" class="btn btn-outline-danger rounded p-3 fs-4">
+                        <a href="https://facebook.com/dokyanh220" style="text-decoration: none;">Love here</a>
+                    </button>
+                </div>
+            </div>
+
+        </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,5 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // First popup
+    const handleFirstPopup = () => {
+        const firstPopup = document.getElementById('first-popup');
+        const firstPopupClose = document.getElementById('first-popup-close');
+
+        if (!firstPopup || !firstPopupClose) return;
+
+        firstPopup.classList.remove('d-none');
+
+        const closeFirstPopup = () => {
+            firstPopup.classList.add('d-none');
+        };
+
+        firstPopupClose.addEventListener('click', closeFirstPopup);
+        
+        // Đóng popup khi click ra ngoài vùng nội dung
+        firstPopup.addEventListener('click', (e) => {
+            if (e.target === firstPopup) {
+                closeFirstPopup();
+            }
+        });
+    };
+
     // Hàm xử lý thanh tiến trình trên cùng
     const handleProgressBar = () => {
         const progressBar = document.querySelector(".progress-bar-custom");
@@ -141,27 +164,227 @@ document.addEventListener("DOMContentLoaded", () => {
                 closePopup();
             }
         });
-    };
-
-    // Hàm xử lý nút chơi nhạc
+    };    // Hàm Audio
     const handleAudioPlayer = () => {
-        const audioPlayer = document.getElementById("audio-player");
-        const playBtn = document.getElementById("play-audio-btn");
-
-        if (!audioPlayer || !playBtn) return;
-
-        playBtn.addEventListener("click", () => {
-            const isPlaying = !audioPlayer.paused;
-            if (isPlaying) {
-                audioPlayer.pause();
-                playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
-            } else {
-                audioPlayer.play();
-                playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        // DOM Elements
+        const audioControl = document.querySelector('.audio-control');
+        const audioToggle = document.getElementById('audio-control-toggle');
+        const audioClose = document.getElementById('audio-control-close');
+        const audioPlayer = document.getElementById('audio-player');
+        const playBtn = document.getElementById('play-audio-btn');
+        const prevBtn = document.getElementById('audio-prev-btn');
+        const nextBtn = document.getElementById('audio-next-btn');
+        const volumeSlider = document.getElementById('volume-slider');
+        const trackName = document.querySelector('.audio-control__track-name');
+        const trackArtist = document.querySelector('.audio-control__track-artist');
+        const trackImage = document.querySelector('.audio-control__track-image img');
+        const progressBar = document.querySelector('.audio-control__progress-bar');
+        const progressCurrent = document.querySelector('.audio-control__progress-current');
+        const currentTimeDisplay = document.getElementById('audio-current-time');
+        const durationDisplay = document.getElementById('audio-duration');
+        const playlistItems = document.querySelectorAll('.audio-control__playlist-item');
+        
+        // Playlist data
+        const playlist = [
+            {
+                src: './assets/audio/onlyu.mp3',
+                name: 'Only U',
+                artist: 'Hoàng Tôn'
+            },
+            {
+                src: './assets/audio/wrongtime.mp3',
+                name: 'Wrong Time',
+                artist: 'DangRangTo'
+            },
+            {
+                src: './assets/audio/duongxauotmua.mp3',
+                name: 'Đường xa ướt mưa',
+                artist: 'Trọng Tấn'
+            },
+            {
+                src: './assets/audio/sominhphaiketthuc.mp3',
+                name: 'Sợ mình phải kết thúc',
+                artist: 'Nhật Phong'
+            },
+            {
+                src: './assets/audio/emdangnghigi.mp3',
+                name: 'Em đang nghĩ gì',
+                artist: 'Hoàng Tôn'
+            },
+            {
+                src: './assets/audio/sunghiepchuong.mp3',
+                name: 'Sự Nghiệp Chướng',
+                artist: 'Pháo'
+            },
+            {
+                src: './assets/audio/doituthe.mp3',
+                name: 'Đổi Tư thế',
+                artist: 'Bình Gold, Andree RH'
             }
+        ];
+        
+        // Track state
+        let currentTrackIndex = 0;
+        
+        // Functions
+        const updateActiveTrack = () => {
+            playlistItems.forEach((item, index) => {
+                if (index === currentTrackIndex) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        };
+
+        const updateDuration = () => {
+            if (durationDisplay && !isNaN(audioPlayer.duration)) {
+                const durationMinutes = Math.floor(audioPlayer.duration / 60);
+                const durationSeconds = Math.floor(audioPlayer.duration % 60);
+                durationDisplay.textContent = `${durationMinutes}:${durationSeconds < 10 ? '0' : ''}${durationSeconds}`;
+            }
+        };
+
+        const updateProgress = () => {
+            if (!isNaN(audioPlayer.duration) && progressCurrent) {
+                const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                progressCurrent.style.width = `${progress}%`;
+                
+                if (currentTimeDisplay) {
+                    const currentMinutes = Math.floor(audioPlayer.currentTime / 60);
+                    const currentSeconds = Math.floor(audioPlayer.currentTime % 60);
+                    currentTimeDisplay.textContent = `${currentMinutes}:${currentSeconds < 10 ? '0' : ''}${currentSeconds}`;
+                }
+            }
+        };
+
+        const loadTrack = (trackIndex) => {
+            const track = playlist[trackIndex];
+            
+            // Update audio source
+            audioPlayer.src = track.src;
+            
+            // Update track display info
+            if (trackName) trackName.textContent = track.name;
+            if (trackArtist) trackArtist.textContent = track.artist;
+            if (trackImage) {
+                trackImage.onerror = () => {
+                    trackImage.src = './assets/img/avatar/IMG_1871.png'; // Default image
+                };
+            }
+            
+            // Reset playback state
+            if (playBtn) playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+            
+            // Update visual state in playlist
+            updateActiveTrack();
+            
+            // Preload audio
+            audioPlayer.load();
+            
+            // Update duration after metadata loads
+            audioPlayer.addEventListener('loadedmetadata', updateDuration, { once: true });
+        };
+        
+        // Event Listeners
+        if (audioToggle) {
+            audioToggle.addEventListener('click', () => {
+                audioControl.classList.toggle('active');
+            });
+        }
+        
+        if (audioClose) {
+            audioClose.addEventListener('click', () => {
+                audioControl.classList.remove('active');
+            });
+        }
+        
+        if (playBtn) {
+            playBtn.addEventListener('click', () => {
+                if (audioPlayer.paused) {
+                    audioPlayer.play()
+                        .then(() => {
+                            playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                        })
+                        .catch(error => {
+                            console.error('Error playing audio:', error);
+                        });
+                } else {
+                    audioPlayer.pause();
+                    playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                }
+            });
+        }
+        
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
+                loadTrack(currentTrackIndex);
+                audioPlayer.play()
+                    .then(() => {
+                        playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                    })
+                    .catch(err => console.error(err));
+            });
+        }
+        
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+                loadTrack(currentTrackIndex);
+                audioPlayer.play()
+                    .then(() => {
+                        playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                    })
+                    .catch(err => console.error(err));
+            });
+        }
+        
+        if (volumeSlider) {
+            volumeSlider.addEventListener('input', () => {
+                audioPlayer.volume = volumeSlider.value / 100;
+            });
+        }
+        
+        if (audioPlayer) {
+            audioPlayer.addEventListener('timeupdate', updateProgress);
+            
+            audioPlayer.addEventListener('ended', () => {
+                nextBtn.click();
+            });
+        }
+        
+        if (progressBar) {
+            progressBar.addEventListener('click', (e) => {
+                const clickPosition = e.offsetX / progressBar.offsetWidth;
+                if (!isNaN(audioPlayer.duration)) {
+                    audioPlayer.currentTime = clickPosition * audioPlayer.duration;
+                }
+            });
+        }
+        
+        // Playlist item click handlers
+        playlistItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                const index = parseInt(item.getAttribute('data-index'));
+                if (!isNaN(index) && index >= 0 && index < playlist.length) {
+                    currentTrackIndex = index;
+                    loadTrack(currentTrackIndex);
+                    audioPlayer.play()
+                        .then(() => {
+                            playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                        })
+                        .catch(err => console.error(err));
+                }
+            });
         });
+
+        // Initialize first track
+        loadTrack(currentTrackIndex);
     };
 
+    // Gọi các hàm để thực thi
+    handleFirstPopup(); // Thay thế hàm cũ
     handleProgressBar();
     handleHeaderSocialHover();
     handleSloganTypewriter();

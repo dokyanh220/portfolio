@@ -986,22 +986,20 @@ body {
 .audio-control {
     position: fixed;
     right: 0;
-    top: 100px;
+    bottom: 80px; /* Thay đổi từ top thành bottom */
     z-index: 999;
     display: flex;
     transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.21, 1.2);
 }
 
 .audio-control__toggle {
-    position: absolute;
-    right: 0;
-    top: -66px;
-    z-index: 10;
+    position: relative; /* Thay đổi từ absolute */
+    z-index: 1001;
 }
 
 .audio-control__toggle-btn {
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
     border-radius: 50% 0 0 50%;
     background: var(--main1-color);
     border: none;
@@ -1031,19 +1029,21 @@ body {
 }
 
 .audio-control__panel {
-    width: 300px;
+    width: 270px;
+    max-height: 400px;
+    overflow-y: auto;
     background: linear-gradient(135deg, rgba(25, 25, 45, 0.95), rgba(20, 20, 40, 0.95));
     backdrop-filter: blur(10px);
     border: 1px solid rgba(123, 104, 238, 0.3);
     border-radius: 16px 0 0 16px;
     padding: 18px;
-    transform: translateX(100%);
+    transform: translateY(100%);
     transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.21, 1.2);
     box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .audio-control.active .audio-control__panel {
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
 .audio-control__header {
@@ -1055,7 +1055,7 @@ body {
 }
 
 .audio-control__header h4 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin: 0;
     background: linear-gradient(90deg, var(--main1-color), var(--main3-color));
     -webkit-background-clip: text;
@@ -1264,7 +1264,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    max-height: 150px;
+    max-height: 130px;
     overflow-y: auto;
 }
 
@@ -1351,131 +1351,67 @@ body {
         bottom: 60px;
         right: 20px;
     }
+
+    .audio-control {
+        /* Chuyển vị trí xuống dưới để không che các thành phần khác */
+        bottom: 20px;
+        top: auto;
+        /* Đảm bảo z-index thích hợp */
+        z-index: 999;
+    }
+
+    .audio-control__panel {
+        /* Thu nhỏ panel trên mobile */
+        width: 270px;
+        max-height: 400px;
+        overflow-y: auto;
+        /* Điều chỉnh hiển thị từ dưới lên */
+        transform: translateY(100%);
+    }
+
+    .audio-control.active .audio-control__panel {
+        transform: translateY(0);
+    }
+
+    .audio-control__track-name,
+    .audio-control__track-artist {
+        max-width: 140px;
+    }
+
+    /* Giảm kích thước tiêu đề */
+    .audio-control__header h4 {
+        font-size: 1.6rem;
+    }
+
+    /* Điều chỉnh kích thước playlist */
+    .audio-control__playlist {
+        max-height: 130px;
+    }
+
+    /* Tăng kích thước nút toggle để dễ nhấn trên mobile */
+    .audio-control__toggle-btn {
+        width: 50px;
+        height: 50px;
+    }
 }
 
-@keyframes glowScan {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
-
-.communities-content__list-item {
-    transition: all 0.3s;
-    border: 1px solid rgba(123, 104, 238, 0.3);
-    background: rgba(123, 104, 238, 0.05);
-}
-
-.communities-content__list-item:hover {
-    border-color: var(--main3-color);
-    background: rgba(123, 104, 238, 0.1);
-}
-
-.projects-content__list-item {
-    transition: all 0.3s;
-}
-
-.projects-content__list-item:hover {
-    transform: translateX(8px);
-    color: #fff;
-}
-
-/* Popup projects styling */
-#popup-projects li {
-    background: rgba(0, 229, 255, 0.05);
-    border-left: 3px solid var(--main1-color);
-    padding: 12px 16px;
-    margin-bottom: 12px;
-    border-radius: 0 8px 8px 0;
-    transition: all 0.2s;
-}
-
-#popup-projects li:hover {
-    background: rgba(0, 229, 255, 0.1);
-    transform: translateX(5px);
-}
-
-#popup-projects strong {
-    color: #fff;
-    display: block;
-    margin-bottom: 4px;
-}
-
-#popup-projects a {
-    color: var(--main1-color);
-    margin-right: 10px;
+/* Fix các vấn đề khác về z-index */
+.header, .card-box, .infor {
     position: relative;
+    z-index: 1;
 }
 
-#popup-projects a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: #fff;
-    transition: width 0.2s;
+.audio-control {
+    position: fixed;
+    right: 0;
+    bottom: 80px; /* Thay đổi từ top thành bottom */
+    z-index: 999;
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.21, 1.2);
 }
 
-#popup-projects a:hover::after {
-    width: 100%;
-}
-
-/* Popup love styling */
-#popup-love {
-    text-align: center;
-}
-
-#popup-love h3 {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#popup-love h3::after {
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#popup-love p {
-    font-size: 2rem;
-    margin: 30px 0;
-    color: var(--main2-color);
-}
-
-#popup-love .btn {
-    background: linear-gradient(135deg, var(--main2-color), #ff7fa7);
-    color: #fff;
-    font-size: 1.8rem;
-    padding: 12px 24px;
-    border-radius: 50px;
-    font-weight: 500;
-    transition: all 0.3s;
-    box-shadow: 0 5px 15px rgba(255, 62, 127, 0.3);
-    margin-top: 20px;
-    border: none;
-}
-
-#popup-love .btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(255, 62, 127, 0.5);
-}
-
-#popup-love .btn a {
-    color: #fff;
-    text-decoration: none;
-}
-
-/* Hiệu ứng khi popup xuất hiện */
-.custom-overlay__content {
-    transform: scale(0.9);
-    animation: popIn 0.4s cubic-bezier(0.17, 0.67, 0.21, 1.2) forwards;
-}
-
-@keyframes popIn {
-    from { transform: scale(0.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+/* Đảm bảo nút toggle luôn hiển thị đúng */
+.audio-control__toggle {
+    position: relative; /* Thay đổi từ absolute */
+    z-index: 1001;
 }
